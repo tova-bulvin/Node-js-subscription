@@ -28,6 +28,7 @@ const sendEmail = async (user,recipientEmail) => {
         html: html
     };
 
+    //send email
     await transporter.sendMail(mailOptions, function(error, info){
         if (error) {
             console.log(error);
