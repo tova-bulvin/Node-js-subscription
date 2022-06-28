@@ -13,7 +13,7 @@ const sendEmail = async (user,recipientEmail) => {
     });
 
     //create html from user object
-    let html = "<div><h1>New User:</h1>";
+    let html = "<div><h1>New Contact:</h1>";
     Object.keys(user).forEach((key) => {
         let value = user[key]
         html+='<div>'
@@ -24,7 +24,7 @@ const sendEmail = async (user,recipientEmail) => {
     var mailOptions = {
         from: process.env.EmailAddress,
         to: recipientEmail,
-        subject: 'New user details from ex service',
+        subject: 'New contact details from ex service',
         html: html
     };
 
